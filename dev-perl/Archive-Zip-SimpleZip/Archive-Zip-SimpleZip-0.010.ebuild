@@ -1,0 +1,15 @@
+EAPI=5
+
+MODULE_AUTHOR=PMQS
+MODULE_VERSION=0.010
+inherit perl-module
+
+DESCRIPTION="Create ZIP Archives"
+
+SLOT="0"
+KEYWORDS="amd64"
+IUSE=""
+
+RDEPEND=""
+DEPEND="${RDEPEND}"
+

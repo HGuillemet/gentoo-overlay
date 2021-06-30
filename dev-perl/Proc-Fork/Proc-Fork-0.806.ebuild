@@ -1,0 +1,15 @@
+EAPI=5
+
+MODULE_AUTHOR=ARISTOTLE
+MODULE_VERSION=0.806
+inherit perl-module
+
+DESCRIPTION="Proc::Fork"
+
+SLOT="0"
+KEYWORDS="amd64"
+IUSE=""
+
+RDEPEND="dev-perl/Exporter-Tidy"
+DEPEND="${RDEPEND}"
+
