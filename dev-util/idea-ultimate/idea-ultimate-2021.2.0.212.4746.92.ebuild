@@ -38,12 +38,12 @@ DEPEND="!dev-util/${PN}:14
 #		dev-java/openjdk-bin:11
 #	)"
 RDEPEND="${DEPEND}
-	>=virtual/jdk-1.7:*
-	dev-java/jansi-native
 	dev-libs/libdbusmenu
 	media-libs/harfbuzz"
 # on teste sans
 # =dev-util/lldb-10*"
+#	dev-java/jansi-native
+#	>=virtual/jdk-1.7:*
 BDEPEND="dev-util/patchelf"
 RESTRICT="splitdebug"
 S="${WORKDIR}/${MY_PN}-IU-${PV_STRING}"
@@ -90,7 +90,7 @@ src_install() {
 
 	insinto "${dir}"
 	doins -r *
-	fperms 755 "${dir}"/bin/{format.sh,idea.sh,inspect.sh,printenv.py,restart.py,fsnotifier,jbr/lib/jcef_helper}
+	fperms 755 "${dir}"/bin/{format.sh,idea.sh,inspect.sh,printenv.py,restart.py,fsnotifier}
 	JRE_DIR=jbr
 
 	JRE_BINARIES="jaotc jcmd jhsdb jmap jstack pack200 serialver java jdb jinfo jps jstat rmid unpack200 javac jfr jjs jrunscript keytool rmiregistry"
@@ -99,6 +99,7 @@ src_install() {
 			fperms 755 "${dir}"/"${JRE_DIR}"/bin/"${jrebin}"
 		done
 	fi
+	fperms 755 "${dir}"/jbr/lib/jcef_helper
 
 	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
 	newicon "bin/${MY_PN}.png" "${PN}.png"
