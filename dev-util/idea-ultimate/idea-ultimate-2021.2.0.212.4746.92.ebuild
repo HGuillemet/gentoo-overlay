@@ -100,6 +100,7 @@ src_install() {
 		done
 	fi
 	fperms 755 "${dir}"/jbr/lib/jcef_helper
+	fperms 755 "${dir}"/plugins/maven/lib/maven3/bin
 
 	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
 	newicon "bin/${MY_PN}.png" "${PN}.png"
