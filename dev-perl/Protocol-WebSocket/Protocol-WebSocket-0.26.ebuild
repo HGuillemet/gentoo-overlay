@@ -1,7 +1,7 @@
-EAPI=5
+EAPI=7
 
-MODULE_AUTHOR=VTI
-MODULE_VERSION=0.26
+DIST_AUTHOR=VTI
+DIST_VERSION=0.26
 inherit perl-module
 
 DESCRIPTION="Protocol::WebSocket"
@@ -11,5 +11,5 @@ KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND=""
-DEPEND="${RDEPEND} dev-perl/Module-Build-Tiny"
+BDEPEND="${RDEPEND} dev-perl/Module-Build-Tiny"
 

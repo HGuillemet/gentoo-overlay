@@ -1,7 +1,7 @@
-EAPI=5
+EAPI=7
 
-MODULE_AUTHOR=XMIKEW
-MODULE_VERSION=0.0701
+DIST_AUTHOR=XMIKEW
+DIST_VERSION=0.0701
 inherit perl-module
 
 DESCRIPTION="DateTime::Format::MySQL"
@@ -11,5 +11,5 @@ KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="dev-perl/DateTime dev-perl/DateTime-Format-Builder"
-DEPEND="${RDEPEND} dev-perl/Module-Build"
+BDEPEND="${RDEPEND} dev-perl/Module-Build"
 

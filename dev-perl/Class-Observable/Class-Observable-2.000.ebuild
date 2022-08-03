@@ -1,7 +1,7 @@
-EAPI=5
+EAPI=7
 
-MODULE_AUTHOR=ARISTOTLE
-MODULE_VERSION=2.000
+DIST_AUTHOR=ARISTOTLE
+DIST_VERSION=2.000
 inherit perl-module
 
 DESCRIPTION="Class Observable"
@@ -11,5 +11,5 @@ KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="dev-perl/Class-ISA" # dev-perl/Scalar-Util"
-DEPEND="${RDEPEND}"
+BDEPEND="${RDEPEND}"
 

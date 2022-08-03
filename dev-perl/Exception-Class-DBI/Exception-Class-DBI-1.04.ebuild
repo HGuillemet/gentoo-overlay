@@ -1,7 +1,7 @@
-EAPI=5
+EAPI=7
 
-MODULE_AUTHOR=PLICEASE
-MODULE_VERSION=1.04
+DIST_AUTHOR=PLICEASE
+DIST_VERSION=1.04
 inherit perl-module
 
 DESCRIPTION="Exception Class DBI"
@@ -11,5 +11,5 @@ KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="dev-perl/DBI dev-perl/Exception-Class"
-DEPEND="${RDEPEND} dev-perl/Module-Build"
+BDEPEND="${RDEPEND} dev-perl/Module-Build"
 
