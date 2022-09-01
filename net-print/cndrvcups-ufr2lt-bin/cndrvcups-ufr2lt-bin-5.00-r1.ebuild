@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
-inherit eutils autotools multilib versionator
+EAPI=7
+inherit eutils autotools multilib
 
 SOURCES_NAME="linux-UFRIILT-drv-v500-fr"
 
