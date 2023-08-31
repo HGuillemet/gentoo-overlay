@@ -1,6 +1,6 @@
 EAPI=6
 
-inherit apache-module eutils systemd
+inherit apache-module systemd
 
 DESCRIPTION="GSSAPI authentication for Apache"
 HOMEPAGE="https://github.com/gssapi/mod_auth_gssapi"

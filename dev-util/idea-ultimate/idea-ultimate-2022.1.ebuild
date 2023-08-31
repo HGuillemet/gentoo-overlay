@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit eutils desktop
+inherit wrapper desktop
 
 SLOT="0"
 MY_PN="idea"

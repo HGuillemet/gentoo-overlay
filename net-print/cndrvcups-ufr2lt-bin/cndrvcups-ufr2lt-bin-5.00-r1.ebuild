@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=7
-inherit eutils autotools multilib
+inherit autotools multilib
 
 SOURCES_NAME="linux-UFRIILT-drv-v500-fr"
 
