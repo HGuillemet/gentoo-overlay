@@ -1,12 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
-# Distributed under the terms of the GNU General Public License v2
-
 EAPI=7
 inherit wrapper desktop
 
 SLOT="0"
 MY_PN="idea"
-MY_PV="222.3739.54"
+MY_PV="232.10203.10"
 
 KEYWORDS="amd64"
 SRC_URI="https://download.jetbrains.com/idea/${MY_PN}IU-${PV}.tar.gz"
@@ -74,7 +71,8 @@ src_install() {
 	fperms 755 "${dir}"/jbr/lib/jexec
 	fperms 755 "${dir}"/jbr/lib/chrome-sandbox
 	fperms 755 "${dir}"/plugins/maven/lib/maven3/bin
-	fperms 755 "${dir}"/plugins/maven/lib/maven3/bin/mvn*
+	# fperms avec * ne marche plus
+	chmod 0755 "${ED}${dir}"/plugins/maven/lib/maven3/bin/mvn* || die
 	fperms 755 "${dir}"/plugins/Kotlin/kotlinc/bin/kotlin
 	fperms 755 "${dir}"/plugins/Kotlin/kotlinc/bin/kotlin-dce-js
 	fperms 755 "${dir}"/plugins/Kotlin/kotlinc/bin/kotlinc
