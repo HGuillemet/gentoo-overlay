@@ -7,7 +7,7 @@ inherit perl-module
 DESCRIPTION="Workflow"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 arm64"
 IUSE=""
 
 RDEPEND="dev-perl/Log-Log4perl dev-perl/Class-Accessor dev-perl/Class-Observable dev-perl/Class-Factory"

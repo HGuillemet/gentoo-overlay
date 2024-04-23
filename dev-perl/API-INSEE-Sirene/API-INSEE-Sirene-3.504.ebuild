@@ -7,7 +7,7 @@ inherit perl-module
 DESCRIPTION="An interface for the Sirene API of INSEE"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 arm64"
 IUSE=""
 
 RDEPEND="dev-perl/JSON"

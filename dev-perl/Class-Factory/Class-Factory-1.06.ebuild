@@ -7,7 +7,7 @@ inherit perl-module
 DESCRIPTION="Class Factory"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 arm64"
 IUSE=""
 
 RDEPEND=""
