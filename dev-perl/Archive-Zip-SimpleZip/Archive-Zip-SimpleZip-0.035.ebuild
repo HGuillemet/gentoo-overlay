@@ -7,7 +7,7 @@ inherit perl-module
 DESCRIPTION="Create ZIP Archives"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 arm64"
 IUSE=""
 
 # This version requires IO::Compress::Zip 2.093 released in 5.32

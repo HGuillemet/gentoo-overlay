@@ -7,7 +7,7 @@ inherit perl-module
 DESCRIPTION="Class Observable"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 arm64"
 IUSE=""
 
 RDEPEND="dev-perl/Class-ISA" # dev-perl/Scalar-Util"
