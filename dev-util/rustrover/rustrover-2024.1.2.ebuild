@@ -9,8 +9,9 @@ inherit desktop wrapper
 DESCRIPTION="A brand new JetBrains IDE for Rust Developers"
 HOMEPAGE="https://www.jetbrains.com/rust/"
 SLOT="0"
-VER="$(ver_cut 1-2)"
-BUILD_NUMBER="$(ver_cut 3-5)"
+VER="$(ver_cut 1-3)"
+#BUILD_NUMBER="$(ver_cut 4-6)"
+BUILD_NUMBER="241.17011.169"
 KEYWORDS="amd64"
 RESTRICT="bindist mirror splitdebug"
 QA_PREBUILT="opt/${P}/*"
@@ -36,9 +37,9 @@ SIMPLE_NAME="RustRover"
 MY_PN="${PN}"
 SRC_URI_PATH="rustrover"
 SRC_URI_PN="${SIMPLE_NAME}"
-SRC_URI="https://download.jetbrains.com/${SRC_URI_PATH}/${SRC_URI_PN}-${BUILD_NUMBER}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://download-cdn.jetbrains.com/${SRC_URI_PATH=}/${SRC_URI_PN}-${VER}.tar.gz -> ${P}.tar.gz"
 
-S="${WORKDIR}/${SIMPLE_NAME}-${BUILD_NUMBER}"
+S="${WORKDIR}/${SIMPLE_NAME}-${VER}"
 
 src_prepare() {
 	default
