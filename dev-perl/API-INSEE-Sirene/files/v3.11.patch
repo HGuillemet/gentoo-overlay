@@ -1,0 +1,12 @@
+diff '--color=auto' -Naur API-INSEE-Sirene-4.04/lib/API/INSEE/Sirene.pm API-INSEE-Sirene-4.04b/lib/API/INSEE/Sirene.pm
+--- API-INSEE-Sirene-4.04/lib/API/INSEE/Sirene.pm	2021-06-30 10:44:21.000000000 +0200
++++ API-INSEE-Sirene-4.04b/lib/API/INSEE/Sirene.pm	2024-07-30 16:51:09.306747446 +0200
+@@ -16,7 +16,7 @@
+ 
+ use constant {
+     API_AUTH_URL        => 'https://api.insee.fr/token',
+-    API_BASE_URL        => 'https://api.insee.fr/entreprises/sirene/V3',
++    API_BASE_URL        => 'https://api.insee.fr/entreprises/sirene/V3.11',
+     DEFAULT_MAX_RESULTS => 20, # from documentation
+     DEFAULT_TIMEOUT     => 20,
+     HARD_MAX_RESULTS    => 1_000, # from documentation

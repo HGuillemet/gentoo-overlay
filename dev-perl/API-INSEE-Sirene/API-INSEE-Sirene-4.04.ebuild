@@ -17,3 +17,6 @@ RDEPEND="dev-perl/JSON
 	dev-perl/libwww-perl"
 BDEPEND="${RDEPEND}"
 
+PATCHES=(
+  "${FILESDIR}/v3.11.patch"
+)
