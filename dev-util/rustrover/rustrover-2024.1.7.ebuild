@@ -21,7 +21,6 @@ RDEPEND="
 	media-libs/mesa[X(+)]
 	sys-devel/gcc
 	sys-libs/glibc
-	sys-process/audit
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXcursor
