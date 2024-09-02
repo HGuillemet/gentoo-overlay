@@ -80,7 +80,7 @@ src_install() {
 	fperms 755 "${dir}"/plugins/Kotlin/kotlinc/bin/kotlinc-js
 	fperms 755 "${dir}"/plugins/Kotlin/kotlinc/bin/kotlinc-jvm
 
-	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
+	make_wrapper "${PN}" "${dir}/bin/${MY_PN}"
 	newicon "bin/${MY_PN}.png" "${PN}.png"
 	make_desktop_entry "${PN}" "IntelliJ Idea Ultimate" "${PN}" "Development;IDE;"
 
