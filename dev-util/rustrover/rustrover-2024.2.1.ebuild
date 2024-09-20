@@ -74,7 +74,7 @@ src_install() {
 	fperms 755 "${dir}"/plugins/platform-ijent-impl/ijent-x86_64-unknown-linux-musl-release
 	fperms 755 "${dir}"/plugins/tailwindcss/server/tailwindcss-language-server
 
-	make_wrapper "${PN}" "${dir}"/bin/"${MY_PN}".sh
+	make_wrapper "${PN}" "${dir}"/bin/"${MY_PN}"
 	newicon bin/"${MY_PN}".svg "${PN}".svg
 	make_desktop_entry "${PN}" "${SIMPLE_NAME} ${VER}" "${PN}" "Development;IDE;"
 
