@@ -58,7 +58,7 @@ src_install() {
 	insinto "${dir}"
 	doins -r *
 
-	fperms 755 "${dir}"/bin/{format.sh,idea.sh,inspect.sh,ltedit.sh,remote-dev-server.sh,restarter,fsnotifier}
+	fperms 755 "${dir}"/bin/{format.sh,idea,idea.sh,inspect.sh,jetbrains_client.sh,ltedit.sh,remote-dev-server.sh,restarter,fsnotifier}
 	JRE_DIR=jbr
 
 	JRE_BINARIES="java javac javadoc jcmd jdb jfr jhsdb jinfo jmap jps jrunscript jstack jstat jwebserver keytool rmiregistry serialver"
