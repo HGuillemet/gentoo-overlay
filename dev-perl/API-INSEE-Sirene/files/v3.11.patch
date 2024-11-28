@@ -6,7 +6,7 @@ diff '--color=auto' -Naur API-INSEE-Sirene-4.04/lib/API/INSEE/Sirene.pm API-INSE
  use constant {
      API_AUTH_URL        => 'https://api.insee.fr/token',
 -    API_BASE_URL        => 'https://api.insee.fr/entreprises/sirene/V3',
-+    API_BASE_URL        => 'https://api.insee.fr/entreprises/sirene/V3.11',
++    API_BASE_URL        => 'https://api.insee.fr/api-sirene/3.11',
      DEFAULT_MAX_RESULTS => 20, # from documentation
      DEFAULT_TIMEOUT     => 20,
      HARD_MAX_RESULTS    => 1_000, # from documentation
