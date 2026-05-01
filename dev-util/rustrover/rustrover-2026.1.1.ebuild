@@ -9,7 +9,7 @@ inherit desktop wrapper
 DESCRIPTION="JetBrains IDE for Rust Developers"
 HOMEPAGE="https://www.jetbrains.com/rust/"
 SLOT="0"
-BUILD_NUMBER="253.31033.204"
+BUILD_NUMBER="261.23567.140"
 KEYWORDS="amd64"
 RESTRICT="bindist mirror splitdebug"
 QA_PREBUILT="opt/${P}/*"
@@ -46,6 +46,7 @@ src_prepare() {
 	rm -rv ./plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-windows* || die
 	rm -rv ./plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-arm64 || die
 	rm -rf ./plugins/platform-ijent-impl/ijent-aarch64-unknown-linux-musl-release || die
+	rm -rf ./plugins/nativeDebug-plugin/bin/lldb/mac || die
 }
 
 src_install() {
@@ -55,6 +56,7 @@ src_install() {
 	doins -r *
 	# Faire find . -type f -perm 755 dans archive source pour obtenir la liste:
 	fperms 755 "${dir}"/bin/{"${MY_PN}",format,inspect,jetbrains_client,ltedit,remote-dev-server}.sh
+	fperms 755 "${dir}"/bin/remote-dev-server
 	fperms 755 "${dir}"/bin/native-helper/intellij-rust-native-helper
 	fperms 755 "${dir}"/bin/{"${MY_PN}",remote-dev-server,fsnotifier,restarter}
 	fperms 755 "${dir}"/bin/gdb/linux/x64/bin/{gcore,gdb,gdb-add-index,gdbserver,gstack}
@@ -63,12 +65,13 @@ src_install() {
 	fperms 755 "${dir}"/jbr/bin/{java,javac,javadoc,jcmd,jdb,jfr,jhsdb,jinfo,jmap,jps,jrunscript,jstack,jstat,jwebserver,keytool,rmiregistry,serialver}
 	fperms 755 "${dir}"/jbr/lib/{cef_server,chrome-sandbox,jcef_helper,jexec,jspawnhelper}
 
+	fperms 755 "${dir}"/plugins/tailwindcss/server/bin/tailwindcss-language-server
 	fperms 755 "${dir}"/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-amd64
 	fperms 755 "${dir}"/plugins/remote-dev-server/{bin/launcher.sh,selfcontained/bin/xkbcomp,selfcontained/bin/Xvfb}
 	fperms 755 "${dir}"/plugins/javascript-plugin/helpers/package-version-range-matcher/node_modules/semver/bin/semver.js
 	fperms 755 "${dir}"/plugins/platform-ijent-impl
 	fperms 755 "${dir}"/plugins/platform-ijent-impl/ijent-x86_64-unknown-linux-musl-release
-	fperms 755 "${dir}"/plugins/nativeDebug-plugin/bin/lldb/linux/x64/bin/
+	fperms 755 "${dir}"/plugins/nativeDebug-plugin/bin/lldb/linux/x64/bin/LLDBFrontend
 
 	make_wrapper "${PN}" "${dir}"/bin/"${MY_PN}"
 	newicon bin/"${MY_PN}".svg "${PN}".svg
